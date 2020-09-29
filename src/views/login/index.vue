@@ -92,8 +92,11 @@ export default {
       try {
         const res = await login(this.user)
         this.$toast.success('登录成功');
-        console.log(res)
+        // console.log(res)
         this.$store.commit('setUser',res.data.data)
+
+        // 这个方法不太好
+        this.$router.back();
         
       } catch (error) {
         Toast.fail('登录失败');

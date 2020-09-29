@@ -1,5 +1,5 @@
 
-import {request} from '../utils/request'
+import request from '../utils/request'
 
 
 export function login(data){
@@ -18,6 +18,7 @@ export function login(data){
   // })
 }
 
+// 发送短信验证码
 export function sendMsg(mobile){
   
   request({
@@ -26,6 +27,21 @@ export function sendMsg(mobile){
   })
 }
 
+// 获取当前用户信息
+export const getCurrentUser = () => {
+  return request({
+    method: 'get',
+    url: "/app/v1_0/user"
+  })
+}
+
+// 获取当前用户信息
+export const getUserChannels = () => {
+  return request({
+    method: 'get',
+    url: "/app/v1_0/user/channels"
+  })
+}
 
 // export const login = data => {
 //   return request({

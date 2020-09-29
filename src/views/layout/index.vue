@@ -1,6 +1,5 @@
 <template>
   <div class="layout-container">
-    layout
     <router-view/>
     <van-tabbar v-model="active" route>
       <van-tabbar-item icon="home-o" to='/'>首页</van-tabbar-item>
